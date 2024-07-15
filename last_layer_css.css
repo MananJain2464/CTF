@@ -1,0 +1,42 @@
+body {
+    background-image: url('https://www.thoughtco.com/thmb/A4x8aTEofN3KDshSc_euP6fQddg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/William_Orpen__The_Signing_of_Peace_in_the_Hall_of_Mirrors_Versailles_1919-5710267e3df78c3fa23d12a7.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-attachment: fixed; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Text color */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Darkened header */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Darkened container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}

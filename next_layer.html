@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Layer</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/239/684/27/weapons-the-game-soldiers-arma-3-wallpaper-preview.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Text color */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Darkened header */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        h2 {
+            font-size: 24px; /* Adjust the font size as needed */
+            margin: 20px 0;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .container {
+            width: 80%; /* Adjust container width as needed */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Darkened container */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        /* Style the form */
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Second Layer</h1>
+    </header>
+    <div class="container">
+        <h2>Defenders of the Conquered</h2>
+        <p>IcURJYSUsmD9iSfBlHMewiRE53Hg26+hSFNiC9v2wMRYzzE92p/kQsI58LZR81Dy+nt4oVa04WQHVBLwVizLdA==</p>
+        <hr>
+        <p>The past holds secrets, but today, who leads? Allies in shadows, their code recedes.A public front conceals the locked gates. The private realm unveils the cryptic states.In the shadows of unity, we once held the keys to safeguard our cherished territories, the gates wide open. But now, our common enemy's actions have left us seething with rage. we have locked those gates, from those who try'n attempting to breach the defenses of the lands we fought hard to secure. Today, our code of alliance recedes, veiled in secrecy, as we protect what's rightfully ours.</p>
+
+        <!-- Add the form for entering the decrypted message -->
+        <form id="decryptionForm" method="POST" action="validate.php">
+            <label for="decryptionInput">Enter the Decrypted Message:</label>
+            <input type="text" name="decryptionInput" id="decryptionInput" placeholder="Enter your decryption here" required>
+            <button type="submit">Submit</button>
+        </form>
+
+
+        <p id="incorrectMessage" style="display: none; color: red;">Incorrect decryption. Try again.</p>
+        <p id="nextLayerMessage" style="display: none;">Decryption successful! Proceed to the next layer by clicking the button below:</p>
+    </div>
+
+    <script>
+        function checkDecryption() {
+            const decryptionInput = document.getElementById('decryptionInput').value;
+            
+            // Obfuscated expectedMessage
+            const e = String.fromCharCode(84,117,114,110,105,110,103,32,116,104,101,32,84,97,98,108,101,115,58,32,65,108,108,105,101,115,32,70,105,103,104,116,32,66,97,99,107,32,97,110,100,32,87,105,110,33);
+            const id = String.fromCharCode(101,120,112,101,99,116,101,100,77,101,115,115,97,103,101,73,100);
+            const expectedMessage = {};
+            expectedMessage[id] = e;
+
+            if (decryptionInput === expectedMessage[id]) {
+                alert('Decryption successful! Proceed to the next layer.');
+
+                // Show the next layer message and button
+                document.getElementById('nextLayerMessage').style.display = 'block';
+                document.getElementById('nextLayerLink').style.display = 'block';
+
+                // Hide the form and incorrect message
+                document.getElementById('decryptionForm').style.display = 'none';
+                document.getElementById('incorrectMessage').style.display = 'none';
+            } else {
+                // Display incorrect message
+                document.getElementById('incorrectMessage').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
